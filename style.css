@@ -2303,3 +2303,841 @@ html[dir="rtl"] .player-number {
     }
 
 }
+
+/* =========================================
+   STK EVENTS
+========================================= */
+
+.stk-events {
+
+    width: min(1120px, calc(100% - 40px));
+
+    margin: 0 auto;
+
+    padding: 90px 0;
+
+}
+
+
+/* =========================================
+   TITLE
+========================================= */
+
+.events-title {
+
+    margin-bottom: 35px;
+
+}
+
+
+.events-title > span {
+
+    display: inline-block;
+
+    padding: 7px 11px;
+
+    border-radius: 8px;
+
+    background: rgba(116, 104, 184, .14);
+
+    border: 1px solid rgba(145, 133, 211, .2);
+
+    color: #aaa0e9;
+
+    font-size: 8px;
+
+    font-weight: 900;
+
+    letter-spacing: 1.5px;
+
+}
+
+
+.events-title h2 {
+
+    margin-top: 11px;
+
+    color: #eef0ff;
+
+    font-size: clamp(32px, 5vw, 48px);
+
+    line-height: 1;
+
+    letter-spacing: -2px;
+
+}
+
+
+.events-title p {
+
+    max-width: 600px;
+
+    margin-top: 12px;
+
+    color: #929bb5;
+
+    font-size: 11px;
+
+    line-height: 1.8;
+
+}
+
+
+/* =========================================
+   MAIN GRID
+========================================= */
+
+.events-wrapper {
+
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1.45fr)
+        minmax(340px, .85fr);
+
+    gap: 20px;
+
+}
+
+
+/* =========================================
+   EVENT CARD
+========================================= */
+
+.event-card {
+
+    overflow: hidden;
+
+    border-radius: 28px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #252a4b,
+            #202d43
+        );
+
+    border:
+        1px solid rgba(157, 169, 218, .18);
+
+    box-shadow:
+        0 25px 70px rgba(0, 0, 0, .2);
+
+    transition:
+        transform .3s ease,
+        border-color .3s ease;
+
+}
+
+
+.event-card:hover {
+
+    transform: translateY(-6px);
+
+    border-color:
+        rgba(168, 180, 234, .38);
+
+}
+
+
+/* =========================================
+   EVENT PHOTO
+========================================= */
+
+.event-cover {
+
+    position: relative;
+
+    width: 100%;
+
+    aspect-ratio: 16 / 8.5;
+
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            135deg,
+            #554a86,
+            #315b78
+        );
+
+}
+
+
+.event-cover img {
+
+    width: 100%;
+
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+    transition: transform .5s ease;
+
+}
+
+
+.event-card:hover .event-cover img {
+
+    transform: scale(1.04);
+
+}
+
+
+/* EVENT BADGE */
+
+.event-badge {
+
+    position: absolute;
+
+    top: 17px;
+
+    left: 17px;
+
+    padding: 8px 11px;
+
+    border-radius: 9px;
+
+    background:
+        rgba(30, 34, 59, .85);
+
+    border:
+        1px solid rgba(192, 198, 255, .2);
+
+    color: #e0e3ff;
+
+    font-size: 8px;
+
+    font-weight: 900;
+
+    letter-spacing: 1px;
+
+    backdrop-filter: blur(12px);
+
+}
+
+
+.event-badge::first-letter {
+
+    color: #9de0bb;
+
+}
+
+
+/* =========================================
+   EVENT INFO
+========================================= */
+
+.event-info {
+
+    padding: 25px;
+
+}
+
+
+.event-meta {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    gap: 15px;
+
+    color: #7f89a7;
+
+    font-size: 8px;
+
+    font-weight: 800;
+
+    letter-spacing: 1px;
+
+}
+
+
+.event-info h3 {
+
+    margin-top: 11px;
+
+    color: #eef0ff;
+
+    font-size: 26px;
+
+    letter-spacing: -.8px;
+
+}
+
+
+.event-info p {
+
+    max-width: 600px;
+
+    margin-top: 11px;
+
+    color: #a4acc3;
+
+    font-size: 10px;
+
+    line-height: 1.9;
+
+}
+
+
+.event-line {
+
+    height: 1px;
+
+    margin: 20px 0;
+
+    background:
+        rgba(170, 180, 215, .1);
+
+}
+
+
+/* STATUS */
+
+.event-status {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+}
+
+
+.event-status span {
+
+    color: #737e9a;
+
+    font-size: 7px;
+
+    font-weight: 900;
+
+    letter-spacing: 1px;
+
+}
+
+
+.event-status strong {
+
+    padding: 7px 10px;
+
+    border-radius: 8px;
+
+    background:
+        rgba(100, 155, 125, .12);
+
+    border:
+        1px solid rgba(120, 178, 143, .18);
+
+    color: #9dd1ad;
+
+    font-size: 7px;
+
+    letter-spacing: 1px;
+
+}
+
+
+/* =========================================
+   WINNER CARD
+========================================= */
+
+.winner-card {
+
+    position: relative;
+
+    overflow: hidden;
+
+    display: flex;
+
+    flex-direction: column;
+
+    min-height: 100%;
+
+    border-radius: 28px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #332e52,
+            #29364b
+        );
+
+    border:
+        1px solid rgba(194, 177, 231, .2);
+
+    box-shadow:
+        0 25px 70px rgba(0, 0, 0, .2);
+
+}
+
+
+/* GLOW */
+
+.winner-card::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 260px;
+
+    height: 260px;
+
+    top: -150px;
+
+    right: -120px;
+
+    border-radius: 50%;
+
+    background:
+        rgba(140, 108, 197, .2);
+
+    filter: blur(50px);
+
+    pointer-events: none;
+
+}
+
+
+/* =========================================
+   WINNER TOP
+========================================= */
+
+.winner-top {
+
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 13px;
+
+    padding: 25px;
+
+    border-bottom:
+        1px solid rgba(185, 190, 220, .1);
+
+}
+
+
+.trophy {
+
+    width: 48px;
+
+    height: 48px;
+
+    display: grid;
+
+    place-items: center;
+
+    flex-shrink: 0;
+
+    border-radius: 15px;
+
+    background:
+        rgba(214, 181, 87, .12);
+
+    border:
+        1px solid rgba(214, 181, 87, .2);
+
+    font-size: 21px;
+
+}
+
+
+.winner-top span {
+
+    color: #cdb76c;
+
+    font-size: 7px;
+
+    font-weight: 900;
+
+    letter-spacing: 1.5px;
+
+}
+
+
+.winner-top h3 {
+
+    margin-top: 4px;
+
+    color: #f0f1ff;
+
+    font-size: 19px;
+
+}
+
+
+/* =========================================
+   WINNER CONTENT
+========================================= */
+
+.winner-content {
+
+    position: relative;
+
+    flex: 1;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 35px 25px;
+
+    text-align: center;
+
+}
+
+
+/* WINNER PHOTO */
+
+.winner-avatar {
+
+    width: 145px;
+
+    height: 145px;
+
+    overflow: hidden;
+
+    border-radius: 35px;
+
+    border:
+        3px solid rgba(215, 186, 91, .42);
+
+    background:
+        linear-gradient(
+            135deg,
+            #675a9c,
+            #38617f
+        );
+
+    box-shadow:
+        0 20px 50px rgba(0, 0, 0, .3);
+
+}
+
+
+.winner-avatar img {
+
+    width: 100%;
+
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+}
+
+
+/* WINNER TAG */
+
+.winner-tag {
+
+    margin-top: 20px;
+
+    padding: 6px 10px;
+
+    border-radius: 8px;
+
+    background:
+        rgba(213, 181, 89, .1);
+
+    border:
+        1px solid rgba(213, 181, 89, .17);
+
+    color: #d4bc73;
+
+    font-size: 7px;
+
+    font-weight: 900;
+
+    letter-spacing: 1.3px;
+
+}
+
+
+.winner-content h2 {
+
+    margin-top: 9px;
+
+    color: #f0f1ff;
+
+    font-size: 34px;
+
+    letter-spacing: -1.5px;
+
+}
+
+
+.winner-username {
+
+    margin-top: 5px;
+
+    color: #8d97b1;
+
+    font-size: 9px;
+
+}
+
+
+.winner-username strong {
+
+    color: #dce1f5;
+
+}
+
+
+/* =========================================
+   CHAMPION
+========================================= */
+
+.champion {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    margin-top: 20px;
+
+    padding: 10px 14px;
+
+    border-radius: 13px;
+
+    background:
+        rgba(20, 25, 44, .28);
+
+    border:
+        1px solid rgba(181, 186, 216, .1);
+
+    text-align: left;
+
+}
+
+
+.champion > span {
+
+    color: #d9be6d;
+
+    font-size: 18px;
+
+}
+
+
+.champion small {
+
+    display: block;
+
+    color: #7e88a5;
+
+    font-size: 6px;
+
+    font-weight: 900;
+
+    letter-spacing: 1px;
+
+}
+
+
+.champion strong {
+
+    display: block;
+
+    margin-top: 3px;
+
+    color: #dce1f5;
+
+    font-size: 8px;
+
+}
+
+
+/* =========================================
+   WINNER FOOTER
+========================================= */
+
+.winner-footer {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    padding: 16px 25px;
+
+    border-top:
+        1px solid rgba(185, 190, 220, .1);
+
+    color: #737d99;
+
+    font-size: 7px;
+
+    font-weight: 900;
+
+    letter-spacing: 1px;
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 850px) {
+
+    .events-wrapper {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .winner-card {
+
+        min-height: 620px;
+
+    }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 520px) {
+
+    .stk-events {
+
+        width: calc(100% - 28px);
+
+        padding: 65px 0;
+
+    }
+
+
+    .events-title h2 {
+
+        font-size: 35px;
+
+    }
+
+
+    .event-cover {
+
+        aspect-ratio: 16 / 10;
+
+    }
+
+
+    .event-info {
+
+        padding: 20px;
+
+    }
+
+
+    .event-info h3 {
+
+        font-size: 22px;
+
+    }
+
+
+    .event-meta {
+
+        font-size: 7px;
+
+    }
+
+
+    .winner-card {
+
+        min-height: 570px;
+
+    }
+
+
+    .winner-top {
+
+        padding: 20px;
+
+    }
+
+
+    .winner-content {
+
+        padding: 30px 18px;
+
+    }
+
+
+    .winner-avatar {
+
+        width: 130px;
+
+        height: 175px;
+
+        border-radius: 30px;
+
+    }
+
+
+    .winner-content h2 {
+
+        font-size: 30px;
+
+    }
+
+
+    .winner-footer {
+
+        padding: 15px 20px;
+
+    }
+
+}
+
+
+/* =========================================
+   SMALL PHONES
+========================================= */
+
+@media (max-width: 360px) {
+
+    .stk-events {
+
+        width: calc(100% - 22px);
+
+    }
+
+
+    .winner-card {
+
+        min-height: 530px;
+
+    }
+
+
+    .winner-avatar {
+
+        width: 115px;
+
+        height: 115px;
+
+    }
+
+}
